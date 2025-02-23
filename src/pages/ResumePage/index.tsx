@@ -8,9 +8,9 @@ const tempData : ResumeCardProps[] = [
   { resumeID : '412323', resumeName : '2025 삼성SDS', questionsCount : 7 },
 ];
 
-export default function MainPage() {
+export default function ResumePage() {
   return (
-    <MainLayout>
+    <ResumeLayout>
       {tempData.map((item) => (
         <ResumeCard
           key={item.resumeID}
@@ -19,11 +19,11 @@ export default function MainPage() {
           questionsCount={item.questionsCount}
         />
       ))}
-    </MainLayout>
+    </ResumeLayout>
   )
 }
 
-const MainLayout = styled.div`
+const ResumeLayout = styled.div`
   display: flex;
   height: 100px;
   flex-wrap: wrap;
