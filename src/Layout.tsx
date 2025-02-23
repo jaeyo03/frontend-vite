@@ -1,21 +1,21 @@
-import MainPage from "@/pages/MainPage";
 import SideBar from "@/components/common/SideBar.tsx";
 import styled from "@emotion/styled";
 import Header from "@/components/common/Header.tsx";
+import {Outlet} from "react-router";
 
-export default function App(){
+export default function Layout(){
   return (
     <>
       <Header/>
-      <Layout>
+      <BodyLayout>
         <SideBar />
-        <MainPage/>
-      </Layout>
+        <Outlet/>
+      </BodyLayout>
     </>
   )
 }
 
-const Layout = styled.div`
+const BodyLayout = styled.div`
   display: flex;
   height: 100vh;
   background: #F4F4F5;
