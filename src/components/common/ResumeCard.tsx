@@ -18,8 +18,8 @@ export default function ResumeCard({ resumeName, questionsCount }: ResumeCardPro
         </Stat.Root>
       </Card.Body>
       <Card.Footer justifyContent="flex-end">
-        <Button colorPalette="gray" variant="subtle">이름 변경</Button>
-        <Button colorPalette="red" variant="subtle">폴더 삭제</Button>
+        <Button colorPalette="gray" variant="subtle">조회</Button>
+        <Button colorPalette="red" variant="subtle">삭제</Button>
       </Card.Footer>
     </Card.Root>
   )
