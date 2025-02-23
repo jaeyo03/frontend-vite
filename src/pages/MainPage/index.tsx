@@ -1,28 +1,22 @@
-import FolderCard from "@/components/common/FolderCard.tsx";
+import ResumeCard, {ResumeCardProps} from "@/components/common/ResumeCard.tsx";
 import styled from "@emotion/styled";
 
-interface folderData {
-  folderID : string;
-  folderName : string;
-  resumeCount : number;
-}
-
-const tempData : folderData[] = [
-  { folderID : '123123', folderName : '2025 LG전자', resumeCount : 1 },
-  { folderID : '13432', folderName : '잡탕', resumeCount : 4 },
-  { folderID : '13423', folderName : '2025 에릭슨엘지', resumeCount : 10 },
-  { folderID : '412323', folderName : '2025 삼성SDS', resumeCount : 7 },
+const tempData : ResumeCardProps[] = [
+  { resumeID : '123123', resumeName : '2025 LG전자', questionsCount : 1 },
+  { resumeID : '13432', resumeName : '잡탕', questionsCount : 4 },
+  { resumeID : '13423', resumeName : '2025 에릭슨엘지', questionsCount : 10 },
+  { resumeID : '412323', resumeName : '2025 삼성SDS', questionsCount : 7 },
 ];
 
 export default function MainPage() {
   return (
     <MainLayout>
       {tempData.map((item) => (
-        <FolderCard
-          key={item.folderID}
-          folderID={item.folderID}
-          folderName={item.folderName}
-          resumeCount={item.resumeCount}
+        <ResumeCard
+          key={item.resumeID}
+          resumeID={item.resumeID}
+          resumeName={item.resumeName}
+          questionsCount={item.questionsCount}
         />
       ))}
     </MainLayout>

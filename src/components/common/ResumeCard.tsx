@@ -1,21 +1,20 @@
 import { Button, Card } from "@chakra-ui/react"
-import { Avatar } from "@/components/ui/avatar"
 import { Stat } from "@chakra-ui/react"
 
-interface FolderCardProps {
-  folderID : string;
-  folderName : string;
-  resumeCount : number;
+export interface ResumeCardProps {
+  resumeID : string;
+  resumeName : string;
+  questionsCount : number;
 }
 
-export default function FolderCard({ folderID, folderName, resumeCount }: FolderCardProps) {
+export default function ResumeCard({ resumeName, questionsCount }: ResumeCardProps) {
   return (
     <Card.Root width="320px" variant={'outline'} height="200px">
       <Card.Body gap="2">
-        <Card.Title mb="2">{folderName}</Card.Title>
+        <Card.Title mb="2">{resumeName}</Card.Title>
         <Stat.Root size="sm">
           <Stat.Label>자소서 수</Stat.Label>
-          <Stat.ValueText>{resumeCount}</Stat.ValueText>
+          <Stat.ValueText>{questionsCount}</Stat.ValueText>
         </Stat.Root>
       </Card.Body>
       <Card.Footer justifyContent="flex-end">
