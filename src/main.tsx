@@ -2,12 +2,25 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from "@/components/ui/provider"
 import './index.css'
-import App from './App.tsx'
+import Layout from './Layout.tsx'
+import {BrowserRouter, Route, Routes} from "react-router";
+import ResumePage from "@/pages/ResumePage";
+import TrashPage from "@/pages/TrashPage";
+import AccountPage from "@/pages/AccountPage";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Provider>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider>
+        <Routes>
+          <Route path="/" element = {<Layout/>}>
+            <Route index element={<ResumePage />} />
+            <Route path="resume" element={<ResumePage/>}></Route>
+            <Route path="trash" element={<TrashPage/>}></Route>
+            <Route path="account" element={<AccountPage/>}></Route>
+          </Route>
+        </Routes>
+      </Provider>
+    </BrowserRouter>
   </StrictMode>,
 )
