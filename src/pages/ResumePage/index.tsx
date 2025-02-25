@@ -6,6 +6,9 @@ const tempData : ResumeCardProps[] = [
   { resumeID : '13432', resumeName : '잡탕', questionsCount : 4 },
   { resumeID : '13423', resumeName : '2025 에릭슨엘지', questionsCount : 10 },
   { resumeID : '412323', resumeName : '2025 삼성SDS', questionsCount : 7 },
+  { resumeID : '412323', resumeName : '2025 삼성SDS', questionsCount : 7 },
+  { resumeID : '412323', resumeName : '2025 삼성SDS', questionsCount : 7 },
+  { resumeID : '412323', resumeName : '2025 삼성SDS', questionsCount : 7 },
 ];
 
 export default function ResumePage() {
@@ -26,6 +29,7 @@ export default function ResumePage() {
 const ResumeLayout = styled.div`
   display: flex;
   height: 100px;
+  width: fit-content;
   flex-wrap: wrap;
   gap: 20px; /* 아이템 간 간격 */
   padding: 40px;
